@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_light_primary"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="关于APP"
+        app:titleTextColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CollegeAPP"
+        android:layout_gravity="center_horizontal"
+        android:textSize="40sp"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/tkkc"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="        这是作者大二下学期Android程序设计开发的期末课设，作为初学者稍显粗超，还请多多谅解。本APP包含了校园生活需要的多种功能，包括课表查询，课堂笔记，校园工具集合，还有个人主页，支持SQList的增删改查功能。"
+        android:textSize="16sp"
+        android:lineSpacingExtra="6dp"
+        android:layout_margin="20dp"
+        />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="主页" />
+    <item
+        android:id="@+id/course"
+        android:icon="@drawable/course"
+        android:title="课程表" />
+    <item
+        android:id="@+id/write"
+        android:icon="@drawable/write"
+        android:title="笔记本" />
+    <item
+        android:id="@+id/my"
+        android:icon="@drawable/user"
+        android:title="我的" />
+</menu>

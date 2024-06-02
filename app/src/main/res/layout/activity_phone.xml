@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PhoneActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_light_primary"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="校内常用电话"
+        app:titleTextColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一、学校联系方式"
+                android:textColor="@color/my_light_primary"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话：0596-6288506"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="传真：0596-6288214"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="院长信箱：jgxy@xujc.com"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="招生热线：0596-6288416"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="招生邮箱：admissions@xujc.com"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="招聘热线：0596-6288529"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="招聘邮箱：hr@xujc.com"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="校网投稿邮箱：news@xujc.com"/>
+
+            <!-- 各行政部门联系方式 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二、各行政部门联系方式"
+                android:textColor="@color/my_light_primary"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"/>
+
+            <!-- 行政部门信息表 -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <TableRow>
+                    <TextView android:text="部门" android:padding="5dp" android:textStyle="bold"/>
+                    <TextView android:text="电话" android:padding="5dp" android:textStyle="bold"/>
+                    <TextView android:text="Email" android:padding="5dp" android:textStyle="bold"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="办公室"
+                        android:padding="5dp"/>
+                    <TextView android:text="0596-6288506"
+                        android:padding="5dp"/>
+                    <TextView android:text="g-office@xujc.com"
+                        android:padding="5dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="..."
+                        android:padding="5dp"/>
+                    <TextView android:text="..."
+                        android:padding="5dp"/>
+                    <TextView android:text="..."
+                        android:padding="5dp"/>
+                </TableRow>
+            </TableLayout>
+
+            <!-- 教学单位联系方式 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="三、教学单位联系方式"
+                android:textColor="@color/my_light_primary"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"/>
+
+            <!-- 教学单位信息表 -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <TableRow>
+                    <TextView android:text="院系" android:padding="5dp" android:textStyle="bold"/>
+                    <TextView android:text="电话" android:padding="5dp" android:textStyle="bold"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="信息科学与技术学院" android:padding="5dp"/>
+                    <TextView android:text="0596-6288537" android:padding="5dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="..." android:padding="5dp"/>
+                    <TextView android:text="..." android:padding="5dp"/>
+                </TableRow>
+            </TableLayout>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/tkkc"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
