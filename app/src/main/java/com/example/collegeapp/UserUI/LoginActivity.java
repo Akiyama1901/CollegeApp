@@ -1,4 +1,4 @@
-package com.example.collegeapp;
+package com.example.collegeapp.UserUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,8 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.collegeapp.MainActivity;
+import com.example.collegeapp.R;
 import com.example.collegeapp.db.UserDbHelper;
 import com.example.collegeapp.db.UserInfo;
 
@@ -47,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳转到注册页面
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -71,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                             //提交
                             edit.commit();
                             //登录成功
-                            Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+                            Intent intent =new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
                         }else{
                             Toast.makeText(LoginActivity.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();

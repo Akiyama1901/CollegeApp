@@ -1,16 +1,14 @@
-package com.example.collegeapp;
+package com.example.collegeapp.UserUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ShareActionProvider;
 import android.widget.Toast;
 
+import com.example.collegeapp.R;
 import com.example.collegeapp.db.UserDbHelper;
 
 
