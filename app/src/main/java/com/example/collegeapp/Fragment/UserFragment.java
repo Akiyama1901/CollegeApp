@@ -12,12 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.collegeapp.AboutActivity;
-import com.example.collegeapp.LoginActivity;
-import com.example.collegeapp.PhoneActivity;
+import com.example.collegeapp.UserUI.AboutActivity;
+import com.example.collegeapp.UserUI.LoginActivity;
+import com.example.collegeapp.UserUI.PhoneActivity;
 import com.example.collegeapp.R;
-import com.example.collegeapp.UpdatePwdActivity;
-import com.example.collegeapp.UpdateUserInfoActivity;
+import com.example.collegeapp.UserUI.UpdatePwdActivity;
+import com.example.collegeapp.UserUI.UpdateUserInfoActivity;
 import com.example.collegeapp.db.UserInfo;
 
 public class UserFragment extends Fragment {
@@ -71,6 +71,7 @@ public class UserFragment extends Fragment {
                 startActivityForResult(intent,1000);
             }
         });
+
 
         //关于APP
         rootview.findViewById(R.id.about).setOnClickListener(new View.OnClickListener() {

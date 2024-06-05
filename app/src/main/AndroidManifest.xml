@@ -10,25 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeApp">
         <activity
-            android:name=".UpdateUserInfoActivity"
+            android:name=".EditActivity"
+            android:label="编辑记事"
             android:exported="false" />
         <activity
-            android:name=".PhoneActivity"
+            android:name=".AddActivity"
+            android:exported="false"
+            android:label="添加记事" />
+        <activity
+            android:name=".UserUI.UpdateUserInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".AboutActivity"
+            android:name=".UserUI.PhoneActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".UserUI.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".UpdatePwdActivity"
+            android:name=".UserUI.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".UserUI.UpdatePwdActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".UserUI.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserUI.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

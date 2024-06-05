@@ -1,9 +1,11 @@
-package com.example.collegeapp;
+package com.example.collegeapp.UserUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.collegeapp.R;
 
 public class AboutActivity extends AppCompatActivity {
 

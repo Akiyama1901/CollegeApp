@@ -1,4 +1,4 @@
-package com.example.collegeapp;
+package com.example.collegeapp.UserUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.TextView;
+
+import com.example.collegeapp.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.collegeapp;
+package com.example.collegeapp.UserUI;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.collegeapp.R;
 import com.example.collegeapp.db.UserDbHelper;
 import com.example.collegeapp.db.UserInfo;
 
