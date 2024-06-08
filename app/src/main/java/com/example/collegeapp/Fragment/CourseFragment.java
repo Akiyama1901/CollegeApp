@@ -2,7 +2,6 @@ package com.example.collegeapp.Fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +14,11 @@ import androidx.fragment.app.Fragment;
 import com.cjj.MaterialRefreshLayout;
 import com.cjj.MaterialRefreshListener;
 import com.example.collegeapp.ColorUtils;
-import com.example.collegeapp.db.Course;
+import com.example.collegeapp.Course;
 import com.example.collegeapp.CornerTextView;
 import com.example.collegeapp.R;
-import com.example.collegeapp.db.CourseDbOpenHelper;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -34,7 +33,6 @@ public class CourseFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_course, container, false);
 
         weekPanels = new LinearLayout[7];
@@ -56,7 +54,6 @@ public class CourseFragment extends Fragment {
         initSectionView();
         loadCourseData();
         setRefreshListener();
-
         return view;
     }
 
@@ -96,13 +93,37 @@ public class CourseFragment extends Fragment {
     }
 
     private void loadCourseData() {
-        CourseDbOpenHelper dbOpenHelper = new CourseDbOpenHelper(getContext());
-        List<Course> courseData = dbOpenHelper.getAllCourses();
+        List<Course>[] courseModels = new ArrayList[7];
 
-        for (Course course : courseData) {
-            addCourseView(weekPanels[course.getWeekDay() - 1], course);
+        for (int i = 0; i < courseModels.length; i++) {
+            courseModels[i] = new ArrayList<>();
+        }
+
+        courseModels[0].add(new Course(0, "C++", 1, 2, 1, "主5#512", "刘", (int) (Math.random() * 10)));
+        courseModels[0].add(new Course(1, "高等数学", 3, 3, 1, "理工#305", "周", (int) (Math.random() * 10)));
+
+        courseModels[1].add(new Course(2, "离散数学", 2, 2, 2, "理工#502", "郝",(int) (Math.random() * 10)));
+        courseModels[1].add(new Course(3, "Java", 6, 2, 2, "主5#402","康", (int) (Math.random() * 10)));
+
+        courseModels[2].add(new Course(2, "概率统计", 1, 2, 3, "理工#412", "王",(int) (Math.random() * 10)));
+        courseModels[2].add(new Course(3, "数据结构", 5, 2, 3, "理工#411", "薛",(int) (Math.random() * 10)));
+
+        courseModels[3].add(new Course(4, "UE", 1, 3, 4, "主5#511","蔡", (int) (Math.random() * 10)));
+        courseModels[3].add(new Course(5, "大学英语", 5, 2, 4, "主4#207","赵",(int) (Math.random() * 10)));
+
+        courseModels[4].add(new Course(6, "Android程序设计", 1, 2, 5, "主5#516", "林",(int) (Math.random() * 10)));
+        courseModels[4].add(new Course(7, "算法分析与设计", 3, 2, 5, "主5#511","郭", (int) (Math.random() * 10)));
+
+        courseModels[5].add(new Course(9, "云计算技术", 1, 2, 6, "主5#502","林", (int) (Math.random() * 10)));
+        courseModels[5].add(new Course(10, "数据库", 5, 3, 6, "主5#508", "陈",(int) (Math.random() * 10)));
+
+        for (int i = 0; i < courseModels.length; i++) {
+            for (Course course : courseModels[i]) {
+                addCourseView(weekPanels[i], course);
+            }
         }
     }
+
 
 
     private void addCourseView(LinearLayout weekPanel, Course course) {
@@ -114,8 +135,6 @@ public class CourseFragment extends Fragment {
         );
         params.topMargin = (course.getSection() - 1) * itemHeight;
         courseView.setLayoutParams(params);
-        Log.d("CourseFragment", "Adding course view with height: " + (course.getSectionSpan() * itemHeight) +
-                " and top margin: " + ((course.getSection() - 1) * itemHeight));
 
         weekPanel.addView(courseView);
     }

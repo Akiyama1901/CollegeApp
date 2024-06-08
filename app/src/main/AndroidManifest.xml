@@ -10,12 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeApp" >
         <activity
-            android:name=".EditCourseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AddCourseActivity"
-            android:exported="false" />
-        <activity
             android:name=".EditActivity"
             android:exported="false"
             android:label="编辑记事" />

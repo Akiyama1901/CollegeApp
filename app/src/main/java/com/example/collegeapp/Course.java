@@ -1,4 +1,4 @@
-package com.example.collegeapp.db;
+package com.example.collegeapp;
 
 public class Course {
 
@@ -8,18 +8,20 @@ public class Course {
     private int sectionSpan; //跨几节课
     private int weekDay; //周几
     private String classRoom; //教室
+    private String teacher;//教师
     private int courseFlag; //课程背景颜色
 
     public Course() {
     }
 
-    public Course(int id, String courseName, int section, int sectionSpan, int weekDay, String classRoom, int courseFlag) {
+    public Course(int id, String courseName, int section, int sectionSpan, int weekDay, String classRoom, String teacher,int courseFlag) {
         this.id = id;
         this.courseName = courseName;
         this.section = section;
         this.sectionSpan = sectionSpan;
         this.weekDay = weekDay;
         this.classRoom = classRoom;
+        this.teacher=teacher;
         this.courseFlag = courseFlag;
     }
 
@@ -69,6 +71,14 @@ public class Course {
 
     public void setClassRoom(String classRoom) {
         this.classRoom = classRoom;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
     }
 
     public int getCourseFlag() {

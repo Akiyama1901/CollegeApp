@@ -52,7 +52,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.8"
                     android:orientation="vertical">
-                    <!-- Add views for section labels if necessary -->
                 </LinearLayout>
 
                 <LinearLayout
@@ -106,13 +105,4 @@
             </LinearLayout>
         </ScrollView>
     </com.cjj.MaterialRefreshLayout>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addcourse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_add_24"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="20dp"
-        android:onClick="addaddcourse"
-        app:layout_anchorGravity="bottom|end"/>
 </androidx.appcompat.widget.LinearLayoutCompat>
